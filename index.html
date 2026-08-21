@@ -1,0 +1,125 @@
+<!doctype html><html lang=ko><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>요약 · AI 데이터센터 투자 신호</title>
+<style>
+:root{--bg:#eef1f6;--card:#ffffff;--line:#e3e7ee;--tx:#1f2733;--dim:#6b7280;
+ --pos:#0a8a3b;--neg:#d23b3b}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);
+ font:16px/1.65 -apple-system,'Apple SD Gothic Neo',Segoe UI,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:18px}
+h1{font-size:21px;margin:0 0 2px}
+h2{font-size:17px;margin:26px 0 10px}
+.dim{color:var(--dim);font-size:13px} .dimc{color:var(--dim)}
+.hero{background:linear-gradient(135deg,#dc26261a,#ffffff);
+ border:1px solid #dc262655;border-radius:16px;padding:20px;margin:14px 0;
+ box-shadow:0 2px 10px rgba(20,30,50,.05)}
+.hero .rg{font-size:15px;color:#dc2626;font-weight:800}
+.hero .big{font-size:26px;font-weight:800;margin:6px 0 4px}
+.hero .sub{font-size:15px;color:#374151}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:16px;margin:12px 0;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.kpi .n{font-size:24px;font-weight:800}
+.kpi .l{font-size:13px;color:var(--dim)}
+.insight p{margin:0 0 10px} .insight p:last-child{margin:0;
+ font-weight:600;background:#dc262612;padding:10px 12px;border-radius:8px}
+.rbar{margin:10px 0;padding:10px;border-radius:10px;background:#f6f8fc}
+.rbar.cur{outline:2px solid #dc2626;background:#dc26260e}
+.rb-h{display:flex;justify-content:space-between;font-size:14px}
+.rb-track{height:9px;background:#e3e7ee;border-radius:5px;overflow:hidden;margin:6px 0}
+.rb-fill{height:100%}
+.rb-def{font-size:12.5px;color:var(--dim);line-height:1.5}
+.tag{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;
+ font-weight:700;background:#dc2626;color:#fff}
+img{width:100%;border-radius:10px;border:1px solid var(--line);margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;color:var(--dim);font-weight:600}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.pos{color:var(--pos)} .neg{color:var(--neg)} .flat{color:var(--dim)}
+.mgrp{font-size:13px;font-weight:700;color:#dc2626;margin:14px 0 2px}
+table.mkt th:first-child,table.mkt td:first-child{font-size:13px}
+ul{padding-left:6px;margin:8px 0;list-style:none} li{margin:9px 0;font-size:14px}
+.evtag{display:inline-block;font-size:11px;background:#eef2ff;color:#3949ab;
+ padding:1px 7px;border-radius:99px;font-weight:600;margin-right:2px}
+a{color:#1d4ed8;text-decoration:none} a:hover{text-decoration:underline}
+.warn{background:#fdecec;border:1px solid #f3b4b4;color:#a31818;
+ padding:10px;border-radius:10px;margin:10px 0;font-size:14px}
+.note{background:#dc26260d;border-left:3px solid #dc2626;padding:10px 12px;
+ border-radius:0 8px 8px 0;font-size:14px;color:#374151;margin:8px 0}
+.foot{color:var(--dim);font-size:12px;margin-top:24px;line-height:1.6}
+b.hl{color:#dc2626}
+.navbar{display:flex;gap:6px;overflow-x:auto;padding:4px 0 14px;
+ -webkit-overflow-scrolling:touch}
+.navpill{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+ padding:8px 13px;border-radius:99px;background:var(--card);
+ border:1px solid var(--line);color:var(--tx);font-size:13.5px;font-weight:600;
+ white-space:nowrap}
+.navpill.cur{background:#dc2626;border-color:#dc2626;color:#fff}
+.ministat{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px;
+ font-weight:700;color:var(--tx)}
+.ministat span.sm{font-size:12.5px;color:var(--dim);font-weight:400;margin-left:6px}
+.cards6{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(max-width:560px){.cards6{grid-template-columns:1fr}}
+.seccard{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:14px;padding:14px 16px;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.seccard .t{font-size:14.5px;font-weight:700;color:var(--tx)}
+.seccard .v{font-size:13.5px;color:var(--dim);margin-top:3px}
+</style></head><body><div class=wrap>
+<h1>📊 AI 데이터센터 투자 신호</h1>
+<div class=dim>업데이트: 2026년 08월 21일 23:12 · 요약</div>
+<div class=navbar><a class="navpill cur" href="index.html">🏠 요약</a><a class="navpill" href="regime.html">🌊 국면·전망</a><a class="navpill" href="market.html">📊 시장</a><a class="navpill" href="structural.html">🏗 장기 성장</a><a class="navpill" href="news.html">📰 뉴스·유사사례</a><a class="navpill" href="backtest.html">🧪 백테스트</a></div>
+
+
+<div class=hero>
+  <div class=rg>🔴 현재 국면: 패닉 (Regime C) · 신뢰도 90%</div>
+  <div class=big>오늘의 판단: 매도</div>
+  <div class=sub>변동성이 크고 시장이 겁먹은 구간. 단기 급락 위험이 있지만, 과하게 빠졌다면 반등 기회이기도.</div>
+</div>
+
+<div class=note>
+<b>👉 쉽게 말하면</b><br>
+지금 시장은 <b class=hl>패닉</b> 국면입니다. 신중하게. 한 번에 사지 말고 나눠서(분할) 대응.
+단기적으로는 <b>매도</b> 신호지만, AI 데이터센터 투자라는 큰 흐름(장기 성장 점수)은
+별개로 봅니다.
+</div>
+
+<h2>한눈에 보기</h2>
+<div class="two">
+  <div class="card kpi"><div class=l>단기 트레이딩 신호</div>
+    <div class=n>매도</div>
+    <div class=dim>며칠~몇 주 기준 · 확신도 60%</div></div>
+  <div class="card kpi"><div class=l>장기 투자 비중</div>
+    <div class=n>66%</div>
+    <div class=dim>이 테마를 자산의 몇 % 들고 갈지 · 현금 34%</div></div>
+</div>
+
+<h2>오늘의 인사이트</h2>
+<div class="card insight"><p>지금 시장은 <b>패닉</b> 국면입니다(신뢰도 90%). 변동성이 크고 시장이 겁먹은 구간. 단기 급락 위험이 있지만, 과하게 빠졌다면 반등 기회이기도. 모델은 이를 단기 신호 <b>매도</b>로 읽고 있어요.</p><p>한 가지 참고할 점: 몬테카를로 자체 예측(오를 확률 52%)은 거의 동전던지기에 가까운 중립인데, 국면 분류와 최근 변동성 흐름(모멘텀)이 이를 압도해서 <b>매도</b> 라벨이 나왔어요. 모델 내부에서도 신호들이 완전히 같은 방향을 가리키지는 않는다는 뜻입니다.</p><p>확신도 60%는 국면 분류 모델의 학습표본이 부족한 상태를 감안해 낮춰 보정한 값이에요(원래 계산값은 더 높았음) — 표본이 적은 국면일수록 실제보다 과하게 확신할 위험이 있어 상한을 둡니다.</p><p>최근 추세(모멘텀)는 아래로 향하는 힘이 우세하고(20일 +1.9%), 한 달 뒤를 수천 번 시뮬레이션하면 중심값은 757pt(현재 대비 +0.6%), 오를 확률은 52%로 계산됩니다. 좋게 풀리면 +15%, 나쁘게 풀리면 -14% 정도가 위·아래 시나리오예요.</p><p>뉴스 분위기는 긍정적인 편(+0.21)이고, 장기 생애주기 점수는 75.9/100으로 구조적 성장 여력이 큰 국면입니다(확장 초기 — 성장이 막 본격화되는 단계).</p><p>지금과 비슷했던 과거 시점들은 이후 3개월(63일) 평균 +10%로, 시장 평균(+7%)보다 강세 흐름이었습니다(참고용).</p><p>정리하면, <b>단기적으로는 출렁임에 주의</b>하되 AI 데이터센터라는 <b>구조적 성장 흐름은 견고</b>합니다. 한 번에 움직이기보다 비중을 유지하며 분할로 대응하는 편이 합리적입니다.</p></div>
+
+<h2>섹션 바로가기</h2>
+<div class=cards6>
+  <a class=seccard href="regime.html"><div class=t>🌊 국면·전망</div>
+    <div class=v>🔴 패닉 90% · 한달뒤 +0.6% 예상</div></a>
+  <a class=seccard href="market.html"><div class=t>📊 시장</div>
+    <div class=v>주요 지수 등 5개 그룹 현황</div></a>
+  <a class=seccard href="structural.html"><div class=t>🏗 장기 성장</div>
+    <div class=v>75.9/100 · 확장 초기</div></a>
+  <a class=seccard href="news.html"><div class=t>📰 뉴스·유사사례</div>
+    <div class=v>분위기 긍정적 · 20건</div></a>
+  <a class=seccard href="backtest.html"><div class=t>🧪 백테스트</div>
+    <div class=v>이 신호, 과거에 통했나 검증</div></a>
+</div>
+
+<div class=foot>
+⚠️ <b>투자 조언이 아닙니다.</b> 이 페이지는 공개 데이터(주가·뉴스) 기반 자동 분석으로
+정보 제공 목적입니다. 투자 판단과 책임은 본인에게 있습니다.<br>
+프록시 지수 = 하이퍼스케일러·GPU·전력장비·인프라·리츠 14종목 가중 묶음.
+국면 분류는 코스톨라니 4국면 모델 기반.<br>
+© AI 데이터센터 모니터 · 매일 자동 갱신
+</div>
+</div></body></html>
