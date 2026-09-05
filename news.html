@@ -1,0 +1,113 @@
+<!doctype html><html lang=ko><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>뉴스·유사사례 · AI 데이터센터 투자 신호</title>
+<style>
+:root{--bg:#eef1f6;--card:#ffffff;--line:#e3e7ee;--tx:#1f2733;--dim:#6b7280;
+ --pos:#0a8a3b;--neg:#d23b3b}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);
+ font:16px/1.65 -apple-system,'Apple SD Gothic Neo',Segoe UI,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:18px}
+h1{font-size:21px;margin:0 0 2px}
+h2{font-size:17px;margin:26px 0 10px}
+.dim{color:var(--dim);font-size:13px} .dimc{color:var(--dim)}
+.hero{background:linear-gradient(135deg,#dc26261a,#ffffff);
+ border:1px solid #dc262655;border-radius:16px;padding:20px;margin:14px 0;
+ box-shadow:0 2px 10px rgba(20,30,50,.05)}
+.hero .rg{font-size:15px;color:#dc2626;font-weight:800}
+.hero .sub{font-size:15px;color:#374151}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:16px;margin:12px 0;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.kpi .n{font-size:24px;font-weight:800}
+.kpi .l{font-size:13px;color:var(--dim)}
+.insight p{margin:0 0 10px} .insight p:last-child{margin:0;
+ font-weight:600;background:#dc262612;padding:10px 12px;border-radius:8px}
+.rbar{margin:10px 0;padding:10px;border-radius:10px;background:#f6f8fc}
+.rbar.cur{outline:2px solid #dc2626;background:#dc26260e}
+.rb-h{display:flex;justify-content:space-between;font-size:14px}
+.rb-track{height:9px;background:#e3e7ee;border-radius:5px;overflow:hidden;margin:6px 0}
+.rb-fill{height:100%}
+.rb-def{font-size:12.5px;color:var(--dim);line-height:1.5}
+.tag{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;
+ font-weight:700;background:#dc2626;color:#fff}
+img{width:100%;border-radius:10px;border:1px solid var(--line);margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;color:var(--dim);font-weight:600}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.pos{color:var(--pos)} .neg{color:var(--neg)} .flat{color:var(--dim)}
+.mgrp{font-size:13px;font-weight:700;color:#dc2626;margin:14px 0 2px}
+table.mkt th:first-child,table.mkt td:first-child{font-size:13px}
+ul{padding-left:6px;margin:8px 0;list-style:none} li{margin:9px 0;font-size:14px}
+.evtag{display:inline-block;font-size:11px;background:#eef2ff;color:#3949ab;
+ padding:1px 7px;border-radius:99px;font-weight:600;margin-right:2px}
+a{color:#1d4ed8;text-decoration:none} a:hover{text-decoration:underline}
+.warn{background:#fdecec;border:1px solid #f3b4b4;color:#a31818;
+ padding:10px;border-radius:10px;margin:10px 0;font-size:14px}
+.note{background:#dc26260d;border-left:3px solid #dc2626;padding:10px 12px;
+ border-radius:0 8px 8px 0;font-size:14px;color:#374151;margin:8px 0}
+.foot{color:var(--dim);font-size:12px;margin-top:24px;line-height:1.6}
+b.hl{color:#dc2626}
+.navbar{display:flex;gap:6px;overflow-x:auto;padding:4px 0 14px;
+ -webkit-overflow-scrolling:touch}
+.navpill{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+ padding:8px 13px;border-radius:99px;background:var(--card);
+ border:1px solid var(--line);color:var(--tx);font-size:13.5px;font-weight:600;
+ white-space:nowrap}
+.navpill.cur{background:#dc2626;border-color:#dc2626;color:#fff}
+.ministat{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px;
+ font-weight:700;color:var(--tx)}
+.ministat span.sm{font-size:12.5px;color:var(--dim);font-weight:400;margin-left:6px}
+.cards6{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(max-width:560px){.cards6{grid-template-columns:1fr}}
+.seccard{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:14px;padding:14px 16px;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.seccard .t{font-size:14.5px;font-weight:700;color:var(--tx)}
+.seccard .v{font-size:13.5px;color:var(--dim);margin-top:3px}
+.gauge{margin-top:16px}
+.gauge-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+ font-size:13.5px;font-weight:700;color:var(--tx)}
+.gauge-head .gtag{font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;
+ background:#6b72801f;color:#6b7280;border:1px solid #6b728066}
+.gauge-track{position:relative;height:10px;border-radius:6px;margin:10px 1px 5px;
+ background:linear-gradient(to right,#dc2626,#e5e7eb 50%,#16a34a)}
+.gauge-marker{position:absolute;top:-4px;width:5px;height:18px;border-radius:2px;
+ background:#6b7280;box-shadow:0 0 0 3px #fff,0 1px 4px rgba(0,0,0,.3);
+ transform:translateX(-50%)}
+.gauge-scale{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim)}
+.gauge-num{font-size:12px;color:var(--dim);margin-top:6px}
+</style></head><body><div class=wrap>
+<h1>📊 AI 데이터센터 투자 신호</h1>
+<div class=dim>업데이트: 2026년 09월 05일 00:27 · 뉴스·유사사례</div>
+<div class=navbar><a class="navpill" href="index.html">🏠 요약</a><a class="navpill" href="regime.html">🌊 국면·전망</a><a class="navpill" href="market.html">📊 시장</a><a class="navpill" href="structural.html">🏗 장기 성장</a><a class="navpill cur" href="news.html">📰 뉴스·유사사례</a><a class="navpill" href="backtest.html">🧪 백테스트</a></div>
+<a class=ministat href="index.html">🔴 변동성 확대 · 오늘의 신호 관망<span class=sm>신뢰도 86% · 지수 758pt · 요약으로 →</span></a>
+
+<h2>주요 뉴스</h2>
+<div class=card>
+<div>종합 분위기: <b>긍정적</b> (+0.25, 20건 분석)</div>
+
+<ul><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRGRHT0Jza0F0SmZCYXcyM0VWenN1VmtIMC0zYXZBR09fMGp3SlM4ZWZrRFhQU0kwRUFYZnU2U3ItVnk2MTVtMlVTUnh1bjF3amFXb0tzNVhvUEpodUFrUXhUbGN3Ymd2Nkg5V1BNdmxJMEdaRnVidnF6RmRzQkloOXJ2TWJHZXhPYlRv?oc=5" target="_blank" rel="noopener">Where $31.6 trillion of capex flows in the era-defining AI build-out - PwC</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ3FKVkw3YVMzM3NXV3pLT1d6el9QMklaNk93NEdaLVlaQThlelk2QzRpaks1ZkxTcDFBelIyWG5PRjZldDVIUm15NEhNOF9VMmhwZTZrU0R3bTdsUU84R3hIV2lNaE9aQ08xSVllYmVhY0tMaE9BbmZYTGtfZlMtM1Y1Vy13SGVKbDV4a1NCUHg4RjJ4YU1DUw?oc=5" target="_blank" rel="noopener">Every Hyperscaler Raised Capex Again. These 3 Boring Industrials Get Paid No Matter Who Wins the AI </a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>🔺 <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOTnlBVG9kM1c4WkRjMjJKVmFTa1NNQThFeFIxZVZ3ZGtPaEZNc2poS1BEdThVSjR5bUhrU1hVNk5Ud2JkczBUMGVrMDV4d05QbGxPR21TX1pLaU01bjA5d1g0TTN1bEc1WWNoUG8wb3Q1TVJyTDNocmNTeGlyTTlKSVZ0VkNtOFNxek9qNVVoZDdNdWo1NzU4YVBXbi1YTnpXYjBscy0taUVmT19UUFR0R25xX25Wb2c?oc=5" target="_blank" rel="noopener">Marvell Rises 6% as Beaten-Down AI Silicon Bounces, Qualcomm Barely Budges - 24/7 Wall St.</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>🔺 <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQaHJCSHJwUHhwUW5ndFZDYmtXQi1iWXJCMS1NRTZSM2ZQWHFVRTRKbnVhV0dwcnExdl8xTVFhRmxiVEJqcVVOSUJ1OGE3bGtOc2hIS0xhU3Nkdk5MZWV3U3VVTDhVZ3JSTVlYcl9nd1liNzhGSFhoSmtTekFVS3lTUHZQMUQzdWxKM0c5UW5fZGFiLVdNUDlscDZYbU9mMV9VUUE?oc=5" target="_blank" rel="noopener">AI’s Absurd Spending Boom? Hyperscalers Are Spending 102% of Cloud Revenue on Capex - Yahoo Finance</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeDZ2dUk3YUJGenFKNm9feDlCc3RxZU9jaXA0WkYxM21uY2dBVmpGXzVMVkQtSXpUbjNEVEJjSGY0M1ZWcExLZ0U1dFNfaVhRc3FSV0IwOXJRMWwwLXpkQTE5RWZvYXBIV1B3NVVvUTdscUlScm5id29aRnNXVEF1OU56T25qbnAwV3dVNUJTZDdaVF8tRHE1SExhb1g5TThkQ0tHbWxBNlI?oc=5" target="_blank" rel="noopener">Global AI Investment Is Forecast to Exceed $1 Trillion in 2026 - Goldman Sachs</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQbER2YldlRmpEQWd0clg3cTNaZzlBZHc0M3VTZk9yYm14Zm9ZaTQyaGVfMkI1TWdQRTBPT0k4NTRhcXFXUG52Vll1NEVhbTRSMDRIUU15aHU3M3MwTU9ldFJwNS1rV09WQW1hUzdtMVBGM2E2RDVwdDZGM21Sc3g3cFNsTkc2QnRlcExMVkVVZXdhbDhkX0JoQ1ozRldQZw?oc=5" target="_blank" rel="noopener">Why Big Tech’s AI Spending Is $3 Trillion Higher Than It Seems - wsj.com</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQcEoyUF9Ld21PQTVDY3JLWm1rNWdISk9RazdSaFNlNFJnZHRrRFVPT1J5MXU5SzZfOXJ4ZFRDM1Vnd3hiTDhxRGRsd2xyWHpyZW5xTnNWTS1jMHNYU0lvTDRwRTZMMnVzRkFwVlZJYTN2UGRmRnZ4dTNSSk02VTQyUFFRX2lsSzBSRXotc21MOEQ?oc=5" target="_blank" rel="noopener">The AI CapEx Trifecta: Grid, Gear, And Local Pushback (NASDAQ:SMH) - Seeking Alpha</a> <span class="dimc">· GNews:hyperscaler-capex</span></li><li>▪️ <span class="evtag">일반</span> <a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxQeExHTUY3Vmh5NDY2OVZPQlAwMmtkc052S0NsSDdPcUl6dDBFamx1TjFFSDFqdnB6S1V4dXdYTWItbUJZWVlaTUVDTnA2ekZmWktvS2RuOWNRZWJ4LW9uOThYY1U5NnlST1MwQ1NydVNmM1lhTkcyTlZtNFRPWXZkTDRwNUp3WUJtZWJxTHh1TnpNcV9IU3RvN0hCaldKMTdpMmdJT1IzZGxNRS1JUEtFNDJsYXJIUllTc19MaHFmRG9ZUlpmRHN3ci1KUThKUXM?oc=5" target="_blank" rel="noopener">Among AI crowd, some investors position for slower hyperscaler spending growth - Reuters</a> <span class="dimc">· GNews:hyperscaler-capex</span></li></ul>
+<div class=dim>제목을 누르면 원문 기사로 이동합니다. 🔺상승 재료 · 🔻하락 재료 · ▪️중립.</div>
+</div>
+
+<h2>비슷했던 과거에는?</h2>
+<div class=card>
+<div class=dim>지금과 가장 닮은 과거 시점들의 이후 수익률(참고용, 예측 아님).</div>
+<table style="margin-top:6px"><tr><th>날짜</th><th>국면</th>
+ <th class=num>21일 후</th><th class=num>63일 후</th></tr><tr><td>2020-10-30</td><td>🔴 C</td><td class="num pos">+9.5%</td><td class="num pos">+17.7%</td></tr><tr><td>2023-04-25</td><td>🔴 C</td><td class="num pos">+8.2%</td><td class="num pos">+30.8%</td></tr><tr><td>2020-10-28</td><td>🔴 C</td><td class="num pos">+8.5%</td><td class="num pos">+13.1%</td></tr><tr><td>2020-11-02</td><td>🔴 C</td><td class="num pos">+7.7%</td><td class="num pos">+16.1%</td></tr><tr><td>2020-03-02</td><td>🔴 C</td><td class="num neg">-12.9%</td><td class="num pos">+5.8%</td></tr></table>
+<div class=dim style="margin-top:6px">평균: 21일 후 +1% ·
+ 63일 후 +10%.</div>
+</div>
+
+<div class=foot>
+⚠️ <b>투자 조언이 아닙니다.</b> 이 페이지는 공개 데이터(주가·뉴스) 기반 자동 분석으로
+정보 제공 목적입니다. 투자 판단과 책임은 본인에게 있습니다.<br>
+프록시 지수 = 하이퍼스케일러·GPU·전력장비·인프라·리츠 14종목 가중 묶음.
+국면 분류는 코스톨라니 4국면 모델 기반.<br>
+© AI 데이터센터 모니터 · 매일 자동 갱신
+</div>
+</div></body></html>

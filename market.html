@@ -1,0 +1,111 @@
+<!doctype html><html lang=ko><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>시장 · AI 데이터센터 투자 신호</title>
+<style>
+:root{--bg:#eef1f6;--card:#ffffff;--line:#e3e7ee;--tx:#1f2733;--dim:#6b7280;
+ --pos:#0a8a3b;--neg:#d23b3b}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);
+ font:16px/1.65 -apple-system,'Apple SD Gothic Neo',Segoe UI,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:18px}
+h1{font-size:21px;margin:0 0 2px}
+h2{font-size:17px;margin:26px 0 10px}
+.dim{color:var(--dim);font-size:13px} .dimc{color:var(--dim)}
+.hero{background:linear-gradient(135deg,#dc26261a,#ffffff);
+ border:1px solid #dc262655;border-radius:16px;padding:20px;margin:14px 0;
+ box-shadow:0 2px 10px rgba(20,30,50,.05)}
+.hero .rg{font-size:15px;color:#dc2626;font-weight:800}
+.hero .sub{font-size:15px;color:#374151}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:16px;margin:12px 0;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.kpi .n{font-size:24px;font-weight:800}
+.kpi .l{font-size:13px;color:var(--dim)}
+.insight p{margin:0 0 10px} .insight p:last-child{margin:0;
+ font-weight:600;background:#dc262612;padding:10px 12px;border-radius:8px}
+.rbar{margin:10px 0;padding:10px;border-radius:10px;background:#f6f8fc}
+.rbar.cur{outline:2px solid #dc2626;background:#dc26260e}
+.rb-h{display:flex;justify-content:space-between;font-size:14px}
+.rb-track{height:9px;background:#e3e7ee;border-radius:5px;overflow:hidden;margin:6px 0}
+.rb-fill{height:100%}
+.rb-def{font-size:12.5px;color:var(--dim);line-height:1.5}
+.tag{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;
+ font-weight:700;background:#dc2626;color:#fff}
+img{width:100%;border-radius:10px;border:1px solid var(--line);margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;color:var(--dim);font-weight:600}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.pos{color:var(--pos)} .neg{color:var(--neg)} .flat{color:var(--dim)}
+.mgrp{font-size:13px;font-weight:700;color:#dc2626;margin:14px 0 2px}
+table.mkt th:first-child,table.mkt td:first-child{font-size:13px}
+ul{padding-left:6px;margin:8px 0;list-style:none} li{margin:9px 0;font-size:14px}
+.evtag{display:inline-block;font-size:11px;background:#eef2ff;color:#3949ab;
+ padding:1px 7px;border-radius:99px;font-weight:600;margin-right:2px}
+a{color:#1d4ed8;text-decoration:none} a:hover{text-decoration:underline}
+.warn{background:#fdecec;border:1px solid #f3b4b4;color:#a31818;
+ padding:10px;border-radius:10px;margin:10px 0;font-size:14px}
+.note{background:#dc26260d;border-left:3px solid #dc2626;padding:10px 12px;
+ border-radius:0 8px 8px 0;font-size:14px;color:#374151;margin:8px 0}
+.foot{color:var(--dim);font-size:12px;margin-top:24px;line-height:1.6}
+b.hl{color:#dc2626}
+.navbar{display:flex;gap:6px;overflow-x:auto;padding:4px 0 14px;
+ -webkit-overflow-scrolling:touch}
+.navpill{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+ padding:8px 13px;border-radius:99px;background:var(--card);
+ border:1px solid var(--line);color:var(--tx);font-size:13.5px;font-weight:600;
+ white-space:nowrap}
+.navpill.cur{background:#dc2626;border-color:#dc2626;color:#fff}
+.ministat{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:14px;
+ font-weight:700;color:var(--tx)}
+.ministat span.sm{font-size:12.5px;color:var(--dim);font-weight:400;margin-left:6px}
+.cards6{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(max-width:560px){.cards6{grid-template-columns:1fr}}
+.seccard{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:14px;padding:14px 16px;box-shadow:0 1px 6px rgba(20,30,50,.04)}
+.seccard .t{font-size:14.5px;font-weight:700;color:var(--tx)}
+.seccard .v{font-size:13.5px;color:var(--dim);margin-top:3px}
+.gauge{margin-top:16px}
+.gauge-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+ font-size:13.5px;font-weight:700;color:var(--tx)}
+.gauge-head .gtag{font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;
+ background:#6b72801f;color:#6b7280;border:1px solid #6b728066}
+.gauge-track{position:relative;height:10px;border-radius:6px;margin:10px 1px 5px;
+ background:linear-gradient(to right,#dc2626,#e5e7eb 50%,#16a34a)}
+.gauge-marker{position:absolute;top:-4px;width:5px;height:18px;border-radius:2px;
+ background:#6b7280;box-shadow:0 0 0 3px #fff,0 1px 4px rgba(0,0,0,.3);
+ transform:translateX(-50%)}
+.gauge-scale{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim)}
+.gauge-num{font-size:12px;color:var(--dim);margin-top:6px}
+</style></head><body><div class=wrap>
+<h1>📊 AI 데이터센터 투자 신호</h1>
+<div class=dim>업데이트: 2026년 09월 05일 00:27 · 시장</div>
+<div class=navbar><a class="navpill" href="index.html">🏠 요약</a><a class="navpill" href="regime.html">🌊 국면·전망</a><a class="navpill cur" href="market.html">📊 시장</a><a class="navpill" href="structural.html">🏗 장기 성장</a><a class="navpill" href="news.html">📰 뉴스·유사사례</a><a class="navpill" href="backtest.html">🧪 백테스트</a></div>
+<a class=ministat href="index.html">🔴 변동성 확대 · 오늘의 신호 관망<span class=sm>신뢰도 86% · 지수 758pt · 요약으로 →</span></a>
+
+<h2>시장 한눈에</h2>
+<div class=card>
+<div class="mgrp">주요 지수</div><table class="mkt"><tr><th>종목</th><th class=num>현재</th><th class=num>1일</th><th class=num>1주</th><th class=num>1개월</th><th class=num>연초비</th></tr><tr><td><b>^SOX</b> <span class="dimc">필라델피아 반도체지수</span></td><td class="num">11,735</td><td class="num pos">+3.4%</td><td class="num pos">+2.3%</td><td class="num neg">-2.6%</td><td class="num pos">+59.3%</td></tr><tr><td><b>^NDX</b> <span class="dimc">나스닥100</span></td><td class="num">29,544</td><td class="num pos">+0.2%</td><td class="num pos">+0.4%</td><td class="num pos">+0.6%</td><td class="num pos">+17.2%</td></tr><tr><td><b>^GSPC</b> <span class="dimc">S&P 500</span></td><td class="num">7,719</td><td class="num neg">-0.4%</td><td class="num pos">+0.1%</td><td class="num pos">+0.1%</td><td class="num pos">+12.5%</td></tr></table><div class="mgrp">AI 반도체</div><table class="mkt"><tr><th>종목</th><th class=num>현재</th><th class=num>1일</th><th class=num>1주</th><th class=num>1개월</th><th class=num>연초비</th></tr><tr><td><b>NVDA</b> <span class="dimc">엔비디아</span></td><td class="num">228</td><td class="num pos">+1.8%</td><td class="num pos">+0.2%</td><td class="num pos">+4.2%</td><td class="num pos">+21.1%</td></tr><tr><td><b>AVGO</b> <span class="dimc">브로드컴</span></td><td class="num">357</td><td class="num neg">-2.7%</td><td class="num neg">-3.9%</td><td class="num neg">-14.6%</td><td class="num pos">+3.1%</td></tr><tr><td><b>TSM</b> <span class="dimc">TSMC</span></td><td class="num">417</td><td class="num pos">+0.4%</td><td class="num neg">-2.4%</td><td class="num pos">+0.7%</td><td class="num pos">+31.1%</td></tr><tr><td><b>AMD</b> <span class="dimc">AMD</span></td><td class="num">456</td><td class="num neg">-0.2%</td><td class="num neg">-4.3%</td><td class="num neg">-5.4%</td><td class="num pos">+104.1%</td></tr><tr><td><b>MU</b> <span class="dimc">마이크론</span></td><td class="num">958</td><td class="num pos">+0.2%</td><td class="num pos">+2.4%</td><td class="num pos">+7.3%</td><td class="num pos">+203.9%</td></tr><tr><td><b>ASML</b> <span class="dimc">ASML</span></td><td class="num">1,646</td><td class="num neg">-2.1%</td><td class="num neg">-5.1%</td><td class="num neg">-1.9%</td><td class="num pos">+42.1%</td></tr><tr><td><b>SMCI</b> <span class="dimc">슈퍼마이크로</span></td><td class="num">38</td><td class="num pos">+2.4%</td><td class="num neg">-1.5%</td><td class="num pos">+24.9%</td><td class="num pos">+22.3%</td></tr><tr><td><b>ARM</b> <span class="dimc">ARM</span></td><td class="num">243</td><td class="num pos">+3.3%</td><td class="num neg">-4.9%</td><td class="num neg">-11.7%</td><td class="num pos">+111.4%</td></tr></table><div class="mgrp">하이퍼스케일러</div><table class="mkt"><tr><th>종목</th><th class=num>현재</th><th class=num>1일</th><th class=num>1주</th><th class=num>1개월</th><th class=num>연초비</th></tr><tr><td><b>MSFT</b> <span class="dimc">마이크로소프트</span></td><td class="num">510</td><td class="num pos">+2.7%</td><td class="num pos">+1.0%</td><td class="num pos">+4.8%</td><td class="num pos">+8.6%</td></tr><tr><td><b>GOOGL</b> <span class="dimc">알파벳</span></td><td class="num">342</td><td class="num pos">+1.6%</td><td class="num pos">+0.5%</td><td class="num neg">-5.5%</td><td class="num pos">+8.8%</td></tr><tr><td><b>META</b> <span class="dimc">메타</span></td><td class="num">611</td><td class="num pos">+3.0%</td><td class="num pos">+6.9%</td><td class="num pos">+3.7%</td><td class="num neg">-5.9%</td></tr><tr><td><b>AMZN</b> <span class="dimc">아마존</span></td><td class="num">259</td><td class="num pos">+1.5%</td><td class="num pos">+1.0%</td><td class="num neg">-5.0%</td><td class="num pos">+14.3%</td></tr><tr><td><b>ORCL</b> <span class="dimc">오라클</span></td><td class="num">154</td><td class="num pos">+5.7%</td><td class="num pos">+1.4%</td><td class="num pos">+6.7%</td><td class="num neg">-20.5%</td></tr></table><div class="mgrp">전력·인프라</div><table class="mkt"><tr><th>종목</th><th class=num>현재</th><th class=num>1일</th><th class=num>1주</th><th class=num>1개월</th><th class=num>연초비</th></tr><tr><td><b>VRT</b> <span class="dimc">버티브</span></td><td class="num">269</td><td class="num pos">+4.7%</td><td class="num neg">-0.2%</td><td class="num neg">-3.3%</td><td class="num pos">+53.1%</td></tr><tr><td><b>ETN</b> <span class="dimc">이튼</span></td><td class="num">397</td><td class="num pos">+1.6%</td><td class="num neg">-4.5%</td><td class="num neg">-11.0%</td><td class="num pos">+22.3%</td></tr><tr><td><b>GEV</b> <span class="dimc">GE버노바</span></td><td class="num">942</td><td class="num pos">+2.2%</td><td class="num neg">-1.3%</td><td class="num neg">-7.5%</td><td class="num pos">+38.9%</td></tr><tr><td><b>CEG</b> <span class="dimc">컨스텔레이션</span></td><td class="num">285</td><td class="num neg">-1.7%</td><td class="num pos">+0.9%</td><td class="num pos">+7.7%</td><td class="num neg">-21.8%</td></tr><tr><td><b>PWR</b> <span class="dimc">퀀타서비스</span></td><td class="num">620</td><td class="num pos">+1.5%</td><td class="num neg">-0.3%</td><td class="num neg">-9.2%</td><td class="num pos">+41.1%</td></tr></table><div class="mgrp">데이터센터 리츠</div><table class="mkt"><tr><th>종목</th><th class=num>현재</th><th class=num>1일</th><th class=num>1주</th><th class=num>1개월</th><th class=num>연초비</th></tr><tr><td><b>DLR</b> <span class="dimc">디지털리얼티</span></td><td class="num">188</td><td class="num pos">+2.2%</td><td class="num neg">-2.2%</td><td class="num neg">-3.7%</td><td class="num pos">+22.8%</td></tr><tr><td><b>EQIX</b> <span class="dimc">에퀴닉스</span></td><td class="num">1,041</td><td class="num pos">+2.1%</td><td class="num neg">-3.3%</td><td class="num neg">-1.0%</td><td class="num pos">+38.3%</td></tr></table>
+<div class=dim style="margin-top:10px">필라델피아 반도체지수(SOX)는 AI 반도체 업황의 대표 바로미터입니다.
+초록=상승, 빨강=하락. '연초비'는 올해 들어 누적 수익률.</div>
+</div>
+
+<h2>지금 지표는 어느 종목군에 유리한가?</h2>
+<div class=card>
+<div style="padding:10px 0;border-bottom:1px solid var(--line)"><div style="font-weight:700;font-size:14px">🟡 AI 반도체 <span class=dim style="font-weight:400">· 신호 엇갈림</span></div><div style="margin-top:4px;font-size:13.5px;color:#374151">하이퍼스케일러 CAPEX YoY 64%→80% 재가속(CY2026Q1 기준, EDGAR 분기보고서라 실적발표 후 3~5주 지연) — GPU/HBM 수요의 직접 동력(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음) → 구조적으로 엇갈림 (그룹 1개월 평균 +0.5%, SMCI +24.9% ~ AVGO -14.6%)</div><ul style="margin-top:4px"><li>하이퍼스케일러 CAPEX YoY 64%→80% 재가속(CY2026Q1 기준, EDGAR 분기보고서라 실적발표 후 3~5주 지연) — GPU/HBM 수요의 직접 동력(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음)</li><li>지수가 장기 추세선 대비 +8.9% — 고베타 그룹은 단기 되돌림 폭이 상대적으로 큼</li></ul></div><div style="padding:10px 0;border-bottom:1px solid var(--line)"><div style="font-weight:700;font-size:14px">⚪ 하이퍼스케일러 <span class=dim style="font-weight:400">· 뚜렷한 신호 없음</span></div><div style="margin-top:4px;font-size:13.5px;color:#374151">뚜렷한 구조 신호 없음 — 가격 흐름만 참고 (그룹 1개월 평균 +0.9%, ORCL +6.7% ~ GOOGL -5.5%)</div></div><div style="padding:10px 0;border-bottom:1px solid var(--line)"><div style="font-weight:700;font-size:14px">🟢 전력·인프라 <span class=dim style="font-weight:400">· 수혜 · 우호적</span></div><div style="margin-top:4px;font-size:13.5px;color:#374151">CAPEX 재가속(CY2026Q1 기준, EDGAR 분기보고서라 실적발표 후 3~5주 지연)은 데이터센터 증설 확대 의미 — 전력·냉각 수요 동반 증가(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음) → 구조적으로 우호적 (그룹 1개월 평균 -4.7%, CEG +7.7% ~ ETN -11.0%)</div><ul style="margin-top:4px"><li>CAPEX 재가속(CY2026Q1 기준, EDGAR 분기보고서라 실적발표 후 3~5주 지연)은 데이터센터 증설 확대 의미 — 전력·냉각 수요 동반 증가(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음)</li></ul></div><div style="padding:10px 0;border-bottom:1px solid var(--line)"><div style="font-weight:700;font-size:14px">🟢 데이터센터 리츠 <span class=dim style="font-weight:400">· 수혜 · 우호적</span></div><div style="margin-top:4px;font-size:13.5px;color:#374151">증설 확대 국면은 임대·리스 계약 수요 증가로 연결(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음) → 구조적으로 우호적 (그룹 1개월 평균 -2.3%, EQIX -1.0% ~ DLR -3.7%)</div><ul style="margin-top:4px"><li>증설 확대 국면은 임대·리스 계약 수요 증가로 연결(단, 과거 백테스트상 이 신호만으로는 기저율 대비 뚜렷한 우위 없음)</li></ul></div>
+<div class=dim style="margin-top:10px">CAPEX 모멘텀·자금조달 여건·밸류에이션 위치·뉴스 이벤트 같은
+'지수 레벨' 지표 변화를 그룹별 사전 규칙으로 연결한 것입니다(AI 판단이 아닌 결정론적 매핑).
+괄호 안 수치는 그 그룹의 실제 1개월 주가 흐름 — 구조 신호와 항상 일치하지는 않습니다.</div>
+</div>
+
+<div class=foot>
+⚠️ <b>투자 조언이 아닙니다.</b> 이 페이지는 공개 데이터(주가·뉴스) 기반 자동 분석으로
+정보 제공 목적입니다. 투자 판단과 책임은 본인에게 있습니다.<br>
+프록시 지수 = 하이퍼스케일러·GPU·전력장비·인프라·리츠 14종목 가중 묶음.
+국면 분류는 코스톨라니 4국면 모델 기반.<br>
+© AI 데이터센터 모니터 · 매일 자동 갱신
+</div>
+</div></body></html>
